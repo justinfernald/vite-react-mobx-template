@@ -1,0 +1,43 @@
+{
+  "name": "react-template",
+  "version": "0.0.0",
+  "author": "Justin Fernald",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "serve": "vite preview",
+    "lint:check": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint:format": "prettier . --list-different --write",
+    "lint": "yarn lint:format && yarn lint:fix ",
+    "type-check": "tsc"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "mobx": "^6.6.2",
+    "mobx-react-lite": "^3.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@emotion/babel-plugin": "^11.10.5",
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "@typescript-eslint/eslint-plugin": "^5.41.0",
+    "@typescript-eslint/parser": "^5.41.0",
+    "@vitejs/plugin-react": "^2.2.0",
+    "eslint": "^8.26.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.10",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.4",
+    "vite": "^3.2.0"
+  },
+  "pre-commit": "lint",
+  "license": "MIT"
+}
