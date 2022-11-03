@@ -18,7 +18,7 @@ export const decorators = [
     <div style={{ margin: '1em' }}>
       <div
         style={{
-          outline: '2px solid #0001'
+          outline: '2px solid #0001',
         }}
       >
         <Story />

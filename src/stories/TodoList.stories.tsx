@@ -1,4 +1,4 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import TodoList from '../components/todo/TodoList';
 import TodoListModel from '../models/TodoListModel';

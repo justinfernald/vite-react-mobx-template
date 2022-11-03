@@ -1,7 +1,7 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Property } from 'csstype';
 
 import { Card, CardProps } from '../components/base';
-import { Property } from 'csstype';
 
 const CardTemplate = ({
   color,
