@@ -13,9 +13,10 @@ import { Todo } from './Todo';
 
 export interface TodoListProps {
   store: TodoListModel;
+  onTodoClick: (id: number) => void;
 }
 
-export const TodoList = observer<TodoListProps>(({ store }) => {
+export const TodoList = observer<TodoListProps>(({ store, onTodoClick }) => {
   const state = useLocalObservable(() => ({ newTodoTitle: '' }));
 
   const handleInputChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
@@ -43,7 +44,12 @@ export const TodoList = observer<TodoListProps>(({ store }) => {
       <div css={[flexValue(), flexColumn, flexBetween]}>
         <ul css={padding('md')}>
           {store.todos.map((todo) => (
-            <Todo todo={todo} key={todo.id} onDelete={() => store.removeTodo(todo)} />
+            <Todo
+              onClick={() => onTodoClick(todo.id)}
+              todo={todo}
+              key={todo.id}
+              onDelete={() => store.removeTodo(todo)}
+            />
           ))}
         </ul>
         <div>Tasks left: {store.unfinishedTodoCount}</div>

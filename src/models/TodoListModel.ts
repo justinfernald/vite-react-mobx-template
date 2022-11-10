@@ -13,6 +13,10 @@ export default class TodoListModel {
     return this.todos.reduce((sum, todo) => sum + (todo.finished ? 0 : 1), 0);
   }
 
+  getTodoById(id: number): TodoModel | undefined {
+    return this.todos.find((todo) => todo.id === id);
+  }
+
   addTodo(title: string): void {
     this.todos.push(new TodoModel(title));
   }
